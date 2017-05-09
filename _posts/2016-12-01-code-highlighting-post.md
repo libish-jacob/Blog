@@ -68,4 +68,3 @@ end
         {% endif %}
     </nav><!-- /.pagination -->
     {% endraw %}
-"<!-- more -->"
