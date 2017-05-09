@@ -1,0 +1,23 @@
+---
+layout: post
+title: "A Post with Test"
+description: "Examples and code for displaying images in posts."
+tags: [sample post, images, test]
+categories: [sample, intro]
+---
+
+# Introduction:
+Intro Intro Ksjdbk In Wjfbiqjb
+
+1. note 1
+2. note2 [![image](image "image")](/images/libish.jpg "image")
+
+        #include stdio.h
+       #include stdio.h
+       #include stdio.h
+       #include stdio.h
+       #include stdio.h
+       #include stdio.h
+    
+	
+    
