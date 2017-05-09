@@ -1,5 +1,5 @@
-title:            Blog Title
-description:      Describe your website here.
+title:            GoNetDotNet
+description:      Technology Information Sharing Worldwide.
 
 # put your disqus here
 disqus_shortname:
@@ -39,7 +39,7 @@ menu:
 
 # Owner/author information
 owner:
-  name:           Your name
+  name:           Libish Varghese Jacob
   site:           http://aronbordin.com
   avatar:         images/avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
