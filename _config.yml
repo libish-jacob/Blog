@@ -20,10 +20,10 @@ url: https://libish-jacob.github.io/DotNet/
 menu:
   - title: 'Home'
     url: '/'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
-  - title: 'Install'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
+ # - title: 'Fork'
+ #   url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
+ # - title: 'Install'
+ #   url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
   - title: 'Tags'
     url: '/tags'
   - title: 'Categories'
@@ -40,14 +40,14 @@ menu:
 # Owner/author information
 owner:
   name:           Libish Varghese Jacob
-  site:           http://aronbordin.com
+#  site:           http://aronbordin.com
   avatar:         images/avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  email:          libi.32@gmail.com
   # Twitter nick for use in Twitter cards and follow button.
   twitter: libishjacob # if no twitter in this config, the twitter follow button will be removed
   # GitHub nick for use in follow button in author block.
-  github: aron-bordin
+  #github: aron-bordin
 
 # Twitter account associated with the site if different from owner/author twitter account.
 # Used in Twitter cards.
@@ -55,10 +55,10 @@ twitter:
 
 # Social networking links used in author block underneath posts. Update and remove as you like.
 social:
-  - title: "github"
-    url: "https://github.com/aron-bordin"
+ # - title: "github"
+ #   url: "https://github.com/aron-bordin"
   - title: "linkedin"
-    url: "https://br.linkedin.com/in/aronbordin"
+    url: "https://br.linkedin.com/in/libishjacob"
   - title: "youtube"
     url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
 
