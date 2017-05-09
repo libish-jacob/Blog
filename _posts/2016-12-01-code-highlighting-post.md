@@ -55,7 +55,7 @@ module Jekyll
   end
 end
 {% endhighlight %}
-
+"<!-- more -->"
 ### Standard Code Block
 
     {% raw %}
@@ -68,4 +68,4 @@ end
         {% endif %}
     </nav><!-- /.pagination -->
     {% endraw %}
-"<!-- more -->"
+
