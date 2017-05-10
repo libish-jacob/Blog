@@ -42,7 +42,7 @@ owner:
   name:           Libish Varghese Jacob
 #  site:           http://aronbordin.com
   avatar:         images/libish.jpg
-  bio:            "An average programmer trying to help out the above average programmers who seeks help from internet."
+  bio:            "An average programmer trying to help out the software community with tools to break down the information silo that slows down software innovation and progress."
   email:          libi.32@gmail.com
   # Twitter nick for use in Twitter cards and follow button.
   twitter: libishjacob # if no twitter in this config, the twitter follow button will be removed
