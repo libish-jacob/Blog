@@ -42,10 +42,7 @@ owner:
   name:           Libish Varghese Jacob
 #  site:           http://aronbordin.com
   avatar:         images/libish.jpg
-  bio:            "'Beauty lies in simplicity':- This has become my mission. No matter how complex the system is, the individual parts must be kept simple with simple responsibility and independent from each other. This way we can keep the complex system maintainable with less effort. No matter how complex the system is going to become, it will look beautiful. If things are not simple, then it won’t make a logical sense at first glance, then there is a high risk that going forward, they are going to become more and more complex and hard to maintain and eventually you need to spend a fortune to maintain it. It’s not simple to keep things simple; this is where you need to put in your talent along with all those tools available today. And in software, this is called software engineering and I, am a software engineer. For the last 8+ years, I have worked with the development of .NET based software solutions for a wide variety of application fields. I have taken on different roles as Software developer, Lead Engineer, Technical Architect and as an Analyst. In my current position as Lead Engineer at Vestas, I play a role of a Lead Engineer and as an acting Technical Architect within the functional area of PC based service tools. I hold a master’s degree in computer application. Loves nature, music and travelling. Started my career with a start-up called Acrodelon Technologies from June 2008. I Use my spare time to write articles on technologies at my personal weblog http://gonetdotnet.blogspot.in.
-
-Specialities: Software Programming with C#, .net, Entity Framework, Microsoft Prism framework, Web Services, Microsoft Azure Cloud Services,WPF, WCF, TDD.
-Methodology : Agile, Scrum"
+  bio:            "An average programmer trying to help out the above average programmers who seeks help from internet."
   email:          libi.32@gmail.com
   # Twitter nick for use in Twitter cards and follow button.
   twitter: libishjacob # if no twitter in this config, the twitter follow button will be removed
