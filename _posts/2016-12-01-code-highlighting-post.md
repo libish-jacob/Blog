@@ -12,7 +12,6 @@ Syntax highlighting is a feature that displays source code, in different colors 
 <!--more-->
 Code test.
 
-[^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
 
 ### Rouge Code Blocks
 
