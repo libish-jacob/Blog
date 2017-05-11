@@ -37,7 +37,7 @@ comments: false
     
   <div class="entry-content">
       {{ post.excerpt }}
-      {% if excerpt_words != content_words %}
+      {% if post.content != post.excerpt %}
           <div align="center">
               <div markdown="0"><a href="{{ site.url }}{{ post.url }}" class="btn btn-info">Continue Reading ...</a></div>
           </div>
