@@ -29,6 +29,9 @@ menu:
   - title: 'Categories'
     url: '/categories'
     type: 'categories'
+  - title: 'Archives'
+    url: '/archives'
+    type: 'archives'
   - title: 'Favorites'
     url: '#'
     submenu:
