@@ -32,6 +32,9 @@ menu:
   - title: 'Archives'
     url: '/archives'
     type: 'archives'
+  - title: 'Contact'
+    url: '/Contact'
+    type: 'contact'
   - title: 'Favorites'
     url: '#'
     submenu:
