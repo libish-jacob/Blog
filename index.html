@@ -34,9 +34,10 @@ comments: false
       <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
     {% endif %}
   </header>
+    <!--{% if post.content contains "<!-- more -->" %}-->
   <div class="entry-content">
       {{ post.excerpt }}
-      {% if post.content contains "<!-- more -->" %}
+      {% if post.content != post.excerpt %}
           <div align="center">
               <div markdown="0"><a href="{{ site.url }}{{ post.url }}" class="btn btn-info">Continue Reading ...</a></div>
           </div>
