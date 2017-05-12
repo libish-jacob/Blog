@@ -5,6 +5,7 @@ description: "Just about everything you'll need to style in the theme: headings,
 modified: 2016-12-02
 tags: [sample post]
 categories: [intro]
+published: false
 image:
     feature: feature.jpg
     credit: dargadgetz
