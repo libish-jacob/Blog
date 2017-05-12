@@ -4,33 +4,12 @@ title: About
 share: true
 ---
 
-# Neo-HPSTR Jekyll Theme
-
-Neo-HPSTR Jekyll is a responsive and modern blog template.
-
-# Live Demo
-
-You can see it running [here](http://blog.rhesoft.com/) and [here](http://aronbordin.com/neo-hpstr-jekyll-theme/).
+GoNetDotNet is an Open Access weblog of Libish Varghese Jacob, designed to facilitate technology information sharing worldwide. GoNetDotNet is building Open Access library of technology knowledge in the form of Articles, videos, PowerPoint presentations, and images.
+The GoNetDotNet platform allows users to read and share unlimited number of articles and receive updates from GoNetDotNet.
+GoNetDotNet is dedicated to software professionals, academic institutions, computer organizations, and anyone with the goal of advancing or learning about Microsoft Technologies. 
 
 
-## What Neo-HPSTR brings to the table:
-
-* Modern design.
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Sweet topbar animated menu with support for drop-downs.
-* Optional [Disqus](http://disqus.com) comments and social sharing links.
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page](http://mmistakes.github.io/hpstr-jekyll-theme/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) to make your code examples look snazzy
-* Author panel, with social links
-* Read more tag support(similar with Wordpress ).
-
-![Preview](http://aronbordin.com/images/neo-hpstr-jekyll-theme-preview.png)
 
 
----
-
-## Getting Started
-
-Neo-HPSTR takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
+GoNetDotNet’s Mission 
+GoNetDotNet's mission is to improve technology knowledge by providing the software community with tools to break down the information silos that slows down software innovation and progress.
