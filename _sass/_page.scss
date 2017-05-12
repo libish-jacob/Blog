@@ -346,14 +346,14 @@ ul.social-buttons li a:active {
 // --------------------------------------------------
 #post-index {
 	#main {
-		margin: 40px 2px 20px 2px;
+		margin: 20px 2px 20px 2px;
 		@media #{$medium} {
 			margin-left: 20px;
 			margin-right: 20px;
 		}
 		@media #{$large} {
-			max-width: 800px;
-			margin-top: 50px;
+			max-width: 980px;
+			/*margin-top: 50px;*/
 			margin-left: auto;
 			margin-right: auto;
 		}
