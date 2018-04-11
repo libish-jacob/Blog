@@ -1,3 +1,4 @@
 
 *.scssc
 *.lock
+**_site/
