@@ -30,10 +30,10 @@
         <span class="author vcard"><span class="fn">{{ site.owner.name }}</span></span>
         {% if page.share != false %}{% include social-share.html %}{% endif %}
       </footer>
-    </div><!-- /.entry-content -->
-    {% include author.html %}
+    </div><!-- /.entry-content -->    
     {% if page.comments != false and site.disqus_shortname %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
     {% if site.related_posts.size > 0 %}{% include read-more.html %}{% endif %}
+	{% include author.html %}
   </article>
 </div><!-- /#main -->
 
