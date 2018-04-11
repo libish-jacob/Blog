@@ -2,7 +2,7 @@ title:            GoNetDotNet
 description:      Technology Information Sharing Worldwide.
 
 # put your disqus here
-disqus_shortname:
+disqus_shortname: 
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
@@ -24,6 +24,8 @@ menu:
  #   url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
  # - title: 'Install'
  #   url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
+  - title : 'About'
+    url: '/about'
   - title: 'Tags'
     url: '/tags'
   - title: 'Categories'
@@ -48,7 +50,7 @@ owner:
   name:           Libish Varghese Jacob
 #  site:           http://aronbordin.com
   avatar:         images/libish.jpg
-  bio:            "A programmer trying to help out the software community with tools to break down the information silo that slows down software innovation and progress."
+  bio:            "My name is Libish Varghese Jacob and I am currently working as a lead engineer in one of the leading wind turbine manufacturing firm. I have wide range of interests and getting my hands dirty in technology is one among them. I use this website primarily as my own knowledge base. I share my experiments and experience to public via this site so that it might help someone who is walking the way I already did. The suggestions expressed here is the best to my knowledge at the time of writing it and this may not necessarily be the best possible solution. I would pretty much appreciate if you could comment on it to bring into my notice what could have been better."
   email:          libi.32@gmail.com
   # Twitter nick for use in Twitter cards and follow button.
   twitter: libishjacob # if no twitter in this config, the twitter follow button will be removed
