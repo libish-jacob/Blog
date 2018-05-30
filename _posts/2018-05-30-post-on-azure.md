@@ -7,6 +7,7 @@ categories:
   - Azure
 description: post on azure tags description.
 tags:
+  - Azure
   - Powershell
 ---
 ## Introduction
