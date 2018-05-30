@@ -1,7 +1,7 @@
 ---
 layout: post
 date: '2018-05-30 12:35 +0530'
-published: false
+published: true
 title: post on azure
 categories:
   - Azure
