@@ -120,17 +120,8 @@ theme: neo-hpstr-jekyll-theme
 #  comments: all
 #  endings: all
 
-
-#- name: "categories"
-#        field:
-#          element: "multiselect"
-#          label: "Add Categories"
-#          placeholder: "Choose categories"
-#          options:
-#            - name: "Azure"
-#              value: "Azure"
-#            - name: "Powershell"
-#              value: "Powershell"
+plugins:
+  - jekyll-feed
 
 prose:
   rooturl: '_posts'
