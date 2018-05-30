@@ -154,6 +154,11 @@ prose:
         field:
           element: "text"
           label: "description"
+       - name: "date"
+        field:
+         element: "text"
+         label: "Date"
+         value: "CURRENT_DATETIME"
           
     _posts/static:
       - name: "layout"
