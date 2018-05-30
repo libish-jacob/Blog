@@ -136,6 +136,16 @@ prose:
         field:
           element: "hidden"
           value: "post"
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Add Categories"
+          placeholder: "Choose categories"
+          options:
+            - name: "Azure"
+              value: "Azure"
+            - name: "Powershell"
+              value: "Powershell"
       - name: "tags"
         field:
           element: "multiselect"
