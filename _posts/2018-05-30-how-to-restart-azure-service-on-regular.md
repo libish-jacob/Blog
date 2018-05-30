@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 published: true
 date: '2018-05-30 12:14 +0530'
 title: 'Test post on c#'
