@@ -39,19 +39,19 @@ In order to assign a role to the application in the desired resource group, you 
 ## Powershell script.
 Below is the script which is the restart logic for your webjob.
 
-> $ProgressPreference= "SilentlyContinue"
-$appId = "your application id"
-$tenantId = "the tenant id"
-$password = "password"
-$subscriptionId = "subscription id"
-
->$secpasswd = ConvertTo-SecureString $password -AsPlainText -Force
-$mycreds = New-Object System.Management.Automation.PSCredential ($appId, $secpasswd)
-Add-AzureRmAccount -ServicePrincipal -Tenant $tenantId -Credential $mycreds
-Select-AzureRmSubscription -SubscriptionId $subscriptionId
-Stop-AzureRmWebApp -Name 'name of your service' -ResourceGroupName 'Name of your resource group'
-Start-AzureRmWebApp -Name 'name of your service' -ResourceGroupName 'Name of your resource group' >
-
+	$ProgressPreference= "SilentlyContinue"
+	$appId = "your application id"
+	$tenantId = "the tenant id"
+	$password = "password"
+	$subscriptionId = "subscription id"
+	
+	$secpasswd = ConvertTo-SecureString $password -AsPlainText -Force
+	$mycreds = New-Object System.Management.Automation.PSCredential ($appId, $secpasswd)
+	Add-AzureRmAccount -ServicePrincipal -Tenant $tenantId -Credential $mycreds
+	Select-AzureRmSubscription -SubscriptionId $subscriptionId
+	Stop-AzureRmWebApp -Name 'name of your service' -ResourceGroupName 'Name of your resource group'
+	Start-AzureRmWebApp -Name 'name of your service' -ResourceGroupName 'Name of your resource group' >
+	
 ** Description
 $appId = "This is the application id of the application which you have created in the AD"
 $tenantId = " Go to Azure AD blade, select app registration, Select endpoints and find the tenant id from any of the url mentioned. From the url you can find the tenant id. It is the one which looks like a guid."
