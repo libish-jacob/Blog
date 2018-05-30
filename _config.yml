@@ -125,7 +125,7 @@ plugins:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'https://libish-jacob.github.io/Blog/'
+  siteurl: 'http://localhost:4000/'
   relativeLinks: ''
   media: 'images'
   ignore:
@@ -144,12 +144,54 @@ prose:
           element: "multiselect"
           label: "Add Tags"
           placeholder: "Choose Tags"
-          alterable: true
+          #alterable: true
           options:
+          - name: "WPF"
+              value: "WPF"
+              - name: "WCF"
+              value: "WCF"
+              - name: "C#"
+              value: "C#"
+              - name: "Log4Net"
+              value: "Log4Net"
+              - name: "Dos Command"
+              value: "Dos Command"
+              - name: "Prism"
+              value: "Prism"
+              - name: "SQLite"
+              value: "SQLite"
+              - name: "Entity Framework"
+              value: "Entity Framework"
+              - name: "IIS"
+              value: "IIS"
             - name: "Azure"
               value: "Azure"
             - name: "Powershell"
               value: "Powershell"
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Add Category"
+          placeholder: "Choose category"          
+          options:
+            - name: "Web Server"
+              value: "Web Server"
+            - name: "Cloud"
+              value: "Cloud"
+            - name: "Database"
+              value: "Database"
+            - name: "Operating System"
+              value: "Operating System"
+            - name: "Network"
+              value: "Network"
+            - name: "UI Controls"
+              value: "UI Controls"
+            - name: ".Net"
+              value: ".Net"
+            - name: "Testing"
+              value: "Testing"
+            - name: "Source control"
+              value: "Source control"
       - name: "title"
         field:
           element: "text"
