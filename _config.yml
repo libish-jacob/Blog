@@ -135,17 +135,26 @@ prose:
       - name: "layout"
         field:
           element: "hidden"
-          value: "blog"
+          value: "post"
       - name: "tags"
         field:
           element: "multiselect"
           label: "Add Tags"
           placeholder: "Choose Tags"
           options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
+            - name: "Azure"
+              value: "Azure"
+            - name: "Powershell"
+              value: "Powershell"
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "description"
+        field:
+          element: "text"
+          label: "description"
+          
     _posts/static:
       - name: "layout"
         field:
