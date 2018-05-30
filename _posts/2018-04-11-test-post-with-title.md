@@ -1,17 +1,18 @@
 ---
 layout: post
 title: Test Post With Title
-modified:
-categories: 
+modified: null
+categories: null
 description: TEst post dscription
-tags: []
 image:
-  feature:
-  credit:
-  creditlink:
-comments:
-share:
-date: 2018-04-11T05:15:42-04:00
+  feature: null
+  credit: null
+  creditlink: null
+comments: null
+share: null
+date: 'Wed Apr 11 2018 14:45:42 GMT+0530 (India Standard Time)'
+published: false
+tags: ''
 ---
 
 Here we will try to see how the code highlight for c# will look like.
@@ -20,4 +21,4 @@ Here we will try to see how the code highlight for c# will look like.
 
 {% highlight ruby %}
 private int i =0; 
-{% endhighlight %} 
+{% endhighlight %}
