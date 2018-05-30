@@ -181,7 +181,11 @@ prose:
           element: "checkbox"
           label: "Published"
           value: false
-          
+      - name: "comments"
+        field:
+          element: "checkbox"
+          label: "Comments"
+          value: true 
     _posts/static:
       - name: "layout"
         field:
