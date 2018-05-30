@@ -1,9 +1,15 @@
 ---
 layout: post
-title: "A Post with a Video"
-description: "Custom written post descriptions are the way to go... if you're not lazy."
-tags: [sample post, video]
-categories: [intro]
+title: A Post with a Video
+description: Custom written post descriptions are the way to go... if you're not lazy.
+tags:
+  - sample post
+  - video
+categories:
+  - intro
+published: false
+modified: '2018-05-30 14:19 +0530'
+comments: true
 ---
 
 {::nomarkdown}
