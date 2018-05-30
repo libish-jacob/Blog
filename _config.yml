@@ -158,7 +158,7 @@ prose:
               value: "Powershell"
       - name: "title"
         field:
-          element: "text"
+          element: "textarea"
           label: "title"
       - name: "description"
         field:
