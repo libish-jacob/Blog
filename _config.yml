@@ -172,6 +172,11 @@ prose:
           element: "text"
           label: "Date"
           value: "CURRENT_DATETIME"
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          value: false
           
     _posts/static:
       - name: "layout"
