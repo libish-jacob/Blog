@@ -123,6 +123,8 @@ theme: neo-hpstr-jekyll-theme
 plugins:
   - jekyll-feed
 
+  #alterable: true
+
 prose:
   rooturl: '_posts'
   siteurl: 'http://localhost:4000/'
@@ -143,30 +145,29 @@ prose:
         field:
           element: "multiselect"
           label: "Add Tags"
-          placeholder: "Choose Tags"
-          #alterable: true
+          placeholder: "Choose Tags"          
           options:
           - name: "WPF"
               value: "WPF"
-              - name: "WCF"
+          - name: "WCF"
               value: "WCF"
-              - name: "C#"
+          - name: "C#"
               value: "C#"
-              - name: "Log4Net"
+          - name: "Log4Net"
               value: "Log4Net"
-              - name: "Dos Command"
+          - name: "Dos Command"
               value: "Dos Command"
-              - name: "Prism"
+          - name: "Prism"
               value: "Prism"
-              - name: "SQLite"
+          - name: "SQLite"
               value: "SQLite"
-              - name: "Entity Framework"
+          - name: "Entity Framework"
               value: "Entity Framework"
-              - name: "IIS"
+          - name: "IIS"
               value: "IIS"
-            - name: "Azure"
+          - name: "Azure"
               value: "Azure"
-            - name: "Powershell"
+          - name: "Powershell"
               value: "Powershell"
       - name: "categories"
         field:
