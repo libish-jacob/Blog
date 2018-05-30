@@ -15,7 +15,7 @@ Azure AD blade -> App registration -> New application registration
 
 Once you have created the application using the desired name and an url(dummy also works), you have to set the service principal for the application. For this you should go to the settings of the application and select keys. Now to add key, you have two different ways. One by using a public/private key and the other by using a key and a password pair. Here we will try the key password pair for our example. To do this, create a key by entering a description and expiry as desired. Now save this and it will generate a password for you. You must save it to some safe place as you will not be able to find it again. Now your application is ready. Now we must assign a role to this application.
 
-![]({{site.baseurl}}/images/7.png)![7.png]({{site.baseurl}}/images/7.png)
+![7.png]({{site.baseurl}}/images/7.png)
 
 
 How to assign a role to AD app
@@ -24,18 +24,18 @@ In order to assign a role to the application in the desired resource group, you 
 Powershell script.
 Below is the script which is the restart logic for your webjob.
 
-$ProgressPreference= "SilentlyContinue"
+> $ProgressPreference= "SilentlyContinue"
 $appId = "your application id"
 $tenantId = "the tenant id"
 $password = "password"
 $subscriptionId = "subscription id"
 
-$secpasswd = ConvertTo-SecureString $password -AsPlainText -Force
+>$secpasswd = ConvertTo-SecureString $password -AsPlainText -Force
 $mycreds = New-Object System.Management.Automation.PSCredential ($appId, $secpasswd)
 Add-AzureRmAccount -ServicePrincipal -Tenant $tenantId -Credential $mycreds
 Select-AzureRmSubscription -SubscriptionId $subscriptionId
 Stop-AzureRmWebApp -Name 'name of your service' -ResourceGroupName 'Name of your resource group'
-Start-AzureRmWebApp -Name 'name of your service' -ResourceGroupName 'Name of your resource group'
+Start-AzureRmWebApp -Name 'name of your service' -ResourceGroupName 'Name of your resource group' >
 
 ** Description
 $appId = "This is the application id of the application which you have created in the AD"
