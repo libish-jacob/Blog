@@ -1,11 +1,16 @@
 ---
 layout: post
 title: Post with a Background Image
-description: "Sample post with a background image CSS override."
-tags: [sample post]
-categories: [image]
+description: Sample post with a background image CSS override.
+tags:
+  - sample post
+categories:
+  - image
 image:
   background: triangular.png
+published: false
+modified: '2018-05-30 14:18 +0530'
+comments: true
 ---
 
 Here be a sample post with a custom background image. To utilize this "feature" just add the following YAML to a post's front matter.
