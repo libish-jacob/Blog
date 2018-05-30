@@ -166,8 +166,12 @@ prose:
       - name: "description"
         field:
           element: "textarea"
-          label: "description"
+          label: "description"      
       - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+      - name: "modified"
         field:
           element: "text"
           label: "Date"
