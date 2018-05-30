@@ -120,6 +120,18 @@ theme: neo-hpstr-jekyll-theme
 #  comments: all
 #  endings: all
 
+
+#- name: "categories"
+#        field:
+#          element: "multiselect"
+#          label: "Add Categories"
+#          placeholder: "Choose categories"
+#          options:
+#            - name: "Azure"
+#              value: "Azure"
+#            - name: "Powershell"
+#              value: "Powershell"
+
 prose:
   rooturl: '_posts'
   siteurl: 'https://libish-jacob.github.io/Blog/'
@@ -135,22 +147,13 @@ prose:
       - name: "layout"
         field:
           element: "hidden"
-          value: "post"
-      - name: "categories"
-        field:
-          element: "multiselect"
-          label: "Add Categories"
-          placeholder: "Choose categories"
-          options:
-            - name: "Azure"
-              value: "Azure"
-            - name: "Powershell"
-              value: "Powershell"
+          value: "post"      
       - name: "tags"
         field:
           element: "multiselect"
           label: "Add Tags"
           placeholder: "Choose Tags"
+          alterable: true
           options:
             - name: "Azure"
               value: "Azure"
