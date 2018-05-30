@@ -12,7 +12,8 @@ comments: null
 share: null
 date: 'Wed Apr 11 2018 14:45:42 GMT+0530 (India Standard Time)'
 published: false
-tags: ''
+tags:
+  - Azure
 ---
 
 Here we will try to see how the code highlight for c# will look like.
