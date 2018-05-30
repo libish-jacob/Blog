@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Introduction
 This post is about implementing a web-job in azure which will restart a service on a predefined interval. When restarting a service on a predefined interval clearly says that there is some problem with the implementation, we may rely on this as an emergency measure until we tackle the problem. Here we will ignore the implication behind it but will focus on how to get this done. To get this done, we need an application in AD which has the required permission to restart the service. The components which are required in this process are as mentioned below. Even when scripts are available to create application for you, it is good to go via the portal way to make sure that we do what we understood.
