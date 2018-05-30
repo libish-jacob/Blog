@@ -2,19 +2,21 @@
 published: true
 layout: post
 title: How to restart azure service on regular interval
-modified:
-categories: 
+modified: null
+categories: null
 description: How to restart azure service on regular interval
-tags: [Azure, Powershell]
+tags:
+  - Azure
+  - Powershell
 image:
-  feature:
-  credit:
-  creditlink:
-comments:
-share:
-date: 2018-05-30T05:15:42-04:00
+  feature: null
+  credit: null
+  creditlink: null
+comments: null
+share: null
+date: {}
 ---
-Introduction
+## Introduction
 This post is about implementing a web-job in azure which will restart a service on a predefined interval. When restarting a service on a predefined interval clearly says that there is some problem with the implementation, we may rely on this as an emergency measure until we tackle the problem. Here we will ignore the implication behind it but will focus on how to get this done. To get this done, we need an application in AD which has the required permission to restart the service. The components which are required in this process are as mentioned below. Even when scripts are available to create application for you, it is good to go via the portal way to make sure that we do what we understood.
 
 
@@ -22,7 +24,7 @@ AD app
 PowerShell script
 Web Job service
 
-AD app
+## AD app
 It is with this application that we are going to restart the application. This application should have the required permission to restart the service. In order to create this app you have to go to the 
 Azure AD blade -> App registration -> New application registration
 
@@ -31,10 +33,10 @@ Once you have created the application using the desired name and an url(dummy al
 ![7.png]({{site.baseurl}}/images/7.png)
 
 
-How to assign a role to AD app
+## How to assign a role to AD app
 In order to assign a role to the application in the desired resource group, you have to go to the desired resource group then select Access control and click on Add(+). Now it will open a blade to where you can select a desired role. In this case we will select the owner role. Now to the “select” text box, type your application name which you have created in your AD. It will list your application. Select that and click on save. Now you have assigned a role for the application in your resource group. Now with this you are ready to restart your application. We now need a script which can execute the restart logic.
 
-Powershell script.
+## Powershell script.
 Below is the script which is the restart logic for your webjob.
 
 > $ProgressPreference= "SilentlyContinue"
@@ -59,5 +61,5 @@ $subscriptionId = "In azure, Go to the service that you want to restart and you 
 
 Now we need a web job which can execute this job on a periodic interval without any intervention.
 
-WebJob
+## WebJob
 To create a webjob, go to the resource group and select your service where you need a restart logic. Select webJobs from the settings blade of your service. Click on Add(+) and create a new web-job. Give a proper name then Upload the PowerShell script which you have created earlier and Select Triggered as the type of the job. And to the cron expression provide the desired trigger pattern. In our example we will try to run this job every minute. The pattern should be 0 * * * * *. Now say ok and your job will restart the service.
