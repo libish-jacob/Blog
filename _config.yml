@@ -20,10 +20,6 @@ url: https://libish-jacob.github.io/Blog/
 menu:
   - title: 'Home'
     url: '/'
- # - title: 'Fork'
- #   url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
- # - title: 'Install'
- #   url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
   - title : 'About'
     url: '/about'
   - title: 'Tags'
@@ -55,7 +51,7 @@ owner:
   # Twitter nick for use in Twitter cards and follow button.
   twitter: libishjacob # if no twitter in this config, the twitter follow button will be removed
   # GitHub nick for use in follow button in author block.
-  #github: aron-bordin
+  #github: libish-jacob
 
 # Twitter account associated with the site if different from owner/author twitter account.
 # Used in Twitter cards.
@@ -64,7 +60,7 @@ twitter:
 # Social networking links used in author block underneath posts. Update and remove as you like.
 social:
  # - title: "github"
- #   url: "https://github.com/aron-bordin"
+ #   url: "https://github.com/libish-jacob"
   - title: "linkedin"
     url: "https://br.linkedin.com/in/libishjacob"
   - title: "youtube"
