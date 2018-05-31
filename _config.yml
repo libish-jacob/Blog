@@ -165,6 +165,8 @@ prose:
               value: "Azure"
             - name: "Powershell"
               value: "Powershell"
+            - name: "Visual Studio"
+              value: "Visual Studio"
       - name: "categories"
         field:
           element: "multiselect"
@@ -189,6 +191,8 @@ prose:
               value: "Testing"
             - name: "Source control"
               value: "Source control"
+            - name: "IDE"
+              value: "IDE"
       - name: "title"
         field:
           element: "text"
