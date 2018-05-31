@@ -4,7 +4,7 @@ title: Syntax Highlighting Post
 description: Demo post displaying the various ways of highlighting code in Markdown.
 modified: 'Thu Dec 01 2016 05:30:00 GMT+0530 (India Standard Time)'
 comments: true
-published: true
+published: false
 categories:
   - .Net
 tags:
