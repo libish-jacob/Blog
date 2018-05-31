@@ -7,6 +7,7 @@ title: How to hook into key press in WPF
 tags:
   - WPF
 categories:
+  - UI Controls
   - .Net
 date: '2014-04-13 10:14 +0530'
 description: >-
