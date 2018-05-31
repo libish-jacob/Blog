@@ -167,6 +167,8 @@ prose:
               value: "Powershell"
             - name: "Visual Studio"
               value: "Visual Studio"
+            - name: "Apache"
+              value: "Apache"
       - name: "categories"
         field:
           element: "multiselect"
