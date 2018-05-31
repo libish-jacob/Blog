@@ -12,6 +12,7 @@ tags:
   - WPF
 categories:
   - UI Controls
+date: '2014-06-31 13:43 +0530'
 ---
 ## Introduction
   RadPane in telerik controls can show a header. We normally use the Header property to set the header for RadPane. This works most of the time. But in some scenarios, say for example when we use nested RadPane, this kind of usage doesn't seem to work. The header suddenly disappears. This is a know issue in telerik.
