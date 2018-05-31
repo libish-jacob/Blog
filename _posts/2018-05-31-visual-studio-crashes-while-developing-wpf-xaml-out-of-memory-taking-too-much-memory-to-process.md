@@ -8,6 +8,7 @@ title: >-
   much memory to process
 tags:
   - WPF
+  - Visual Studio
 description: >-
   You may have experienced an annoying behavior of visual studio while
   developing WPF XAML. Say for example Visual Studio consumes large amounts of
@@ -16,6 +17,8 @@ description: >-
   Designer) which visual studio loads while editing XAML. There will be one for
   each XAML that you open for editing.
 date: '2014-04-18 12:34 +0530'
+categories:
+  - IDE
 ---
 ## Introduction
 You may have experienced an annoying behavior of visual studio while developing WPF XAML.
