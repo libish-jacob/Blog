@@ -23,9 +23,22 @@ WPF Controls like DataGrid have default shortcut keys. For example, if you try t
 
 Here we will see how to disable default keyboard shortcut in DataGrid.
 
-
+{% highlight csharp %}
 <datagrid itemssource="{Binding Values}">
   <datagrid.inputbindings>
     <keybinding command="{Binding NotACommand}" key="Delete" modifiers="Control"></keybinding>
   </datagrid.inputbindings>
 </datagrid>
+{% endhighlight %}
+
+And in your viewmodel, the command NotACommand will look like this.
+
+{% highlight csharp %}
+internal class MainWindowViewModel {
+  public ICommand NotACommand  {
+    get {
+      return ApplicationCommands.NotACommand;
+    }
+  }
+}
+{% endhighlight %}
