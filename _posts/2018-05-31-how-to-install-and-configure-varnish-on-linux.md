@@ -14,6 +14,8 @@ description: >-
 categories:
   - Web Server
 date: '2013-06-31 13:18 +0530'
+tags:
+  - Apache
 ---
 ## Introduction
   Varnish is an HTTP accelerator or so called reverse proxy. Varnish is a type of proxy server that retrieves resources on behalf of a client from one or more servers. These resources are then returned to the client as though they originated from the server or servers themselves. Varnish then caches those pages whose expiry header is set to some future date. This means those pages which won’t change until that date. Mostly static pages in a site will have expiry header so the next time when a client requests a page, varnish will look at the header to determine that the page has not expired. If not expired, then it will then serve that page without contacting the web server. This way, load on the server will be less. All static pages will be served by varnish without the knowledge of webserver.
