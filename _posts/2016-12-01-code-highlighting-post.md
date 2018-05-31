@@ -42,6 +42,7 @@ To modify styling and highlight colors edit `/_sass/_rouge.scss`.
 {% endraw %}
 {% endhighlight %}
 
+A csharp code block.
 {% highlight csharp %}
 class A
 {
