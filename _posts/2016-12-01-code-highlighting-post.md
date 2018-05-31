@@ -42,6 +42,14 @@ To modify styling and highlight colors edit `/_sass/_rouge.scss`.
 {% endraw %}
 {% endhighlight %}
 
+{% highlight csharp %}
+class A
+{
+private void Run()
+{}
+}
+{% endhighlight %}
+
 {% highlight ruby %}
 module Jekyll
   class TagIndex < Page
