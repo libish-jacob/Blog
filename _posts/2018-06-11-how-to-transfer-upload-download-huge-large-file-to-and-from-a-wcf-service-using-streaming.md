@@ -50,7 +50,7 @@ SOAP headers are always buffered, even when the transfer mode is set to streamed
 - NetNamedPipeBinding 
 - WebHttpBinding
 
-{% highlight css %}
+{% highlight csharp %}
 <bindings>
  <netNamedPipeBinding>
    <binding name="NamedPipeBinding" transferMode="Streamed" />
@@ -60,7 +60,7 @@ SOAP headers are always buffered, even when the transfer mode is set to streamed
 
 After this we have to decide on the maximum file size which we allow in our application to be transferred. It is good to limit the size of the file which is transferred. Once you have decided on the size, you have to set maxReceivedMessageSize property of the binding to the size which you have decided. This property sets the Max size of the received message which is processed by the binding. This property value is in bites. You can set it up to long.MaxValue which is 9,223,372,036,854,775,807. Here in our example we are setting it to 4294967294 which is around 4 GB.
 
-{% highlight css %}
+{% highlight csharp %}
 <bindings>
  <netNamedPipeBinding>
  <binding name="NamedPipeBinding" transferMode="Streamed" maxReceivedMessageSize="4294967294" />
@@ -70,7 +70,7 @@ After this we have to decide on the maximum file size which we allow in our appl
 
 Now we have to set the maxBufferSize of the binding. This property sets the Max number of bytes used to buffer the incoming message in the memory. Here this is the max size of the message which is processed at a time. SOAP headers are always buffered, even when the transfer mode is set to streamed. The headers for a message must not exceed the size of the MaxBufferSize transport quota. Here in our example we are sending 64k chunks of data at a time so we are setting it to 65536 which is 64K. Here this is the default setting of WCF so we don’t have to change it explicitly. If you decide to change this value, then you have to change this value.
 
-{% highlight css %}
+{% highlight csharp %}
 <bindings>
  <netNamedPipeBinding>
    <binding name="NamedPipeBinding" transferMode="Streamed" maxReceivedMessageSize="4294967294" maxBufferSize="65536" />
@@ -83,7 +83,7 @@ As in our example we will be using upload and download features, we have to set 
 ## Using the code
 We will be using MessageContract in our example. Lets create our message contract before moving further. Our message contract class, which we will be using in our code will look like as shown below
 
-{% highlight css %}
+{% highlight csharp %}
 [MessageContract]
 public class FileUploadMessage {
    [MessageHeader(MustUnderstand = true)]
@@ -98,7 +98,7 @@ public class FileUploadMessage {
 
 Your service side code will be like as shown below.
 
-{% highlight css %}
+{% highlight csharp %}
 public Stream DownloadFile(string fileName) {
 /* This is your contract*/
 /* _basePath is the directory path where you will be storing the file */
@@ -111,7 +111,7 @@ return stream;
 
 And at the client side your code will be as shown below. Remember this is a pseudo code. Please optimize it while using it in your code.
 
-{% highlight css %}
+{% highlight csharp %}
 string baseDir = @"D:\Test";
 string downloadedFileName = "downloadedFestFile.txt";
 /* here we are creating proxy at runtime. If you are using proxy after adding service reference or by creating your own proxy, make sure the properties explained aove are set properly.*/
@@ -147,7 +147,7 @@ If you try to use data contract in your contract where you use Stream as one of 
 ### 3. Creating operation which returns MessageContract to stream file using  MessageContract to stream file.
 When you are using MessageContract to stream file, your service side contract code is as shown below  
 
-{% highlight css %}
+{% highlight csharp %}
 public void TransferFileWithMessageContract(FileUploadMessage fileStream) {
             SaveFile(fileStream.Filename, fileStream.FileByteStream);
         }
@@ -173,7 +173,7 @@ private void SaveFile(string filename, Stream fileStream) {
 
 And on the client side...
 
-{% highlight css %}
+{% highlight csharp %}
 string file = textBox1.Text;
 //NetTcpBinding binding = new NetTcpBinding();
 NetNamedPipeBinding binding = new NetNamedPipeBinding();
@@ -196,7 +196,7 @@ using (FileStream fs = new FileStream(file, FileMode.Open, FileAccess.Read, File
 ### 4. Downoad file using MesageContract.
 For download contract, your service side code looks like as shown below.
 
-{% highlight css %}
+{% highlight csharp %}
 public FileUploadMessage DownloadFileWithMessageContract(FileUploadMessage fileMessage) {
             Stream fileStream = GetFileStream(fileMessage.Filename);
             FileUploadMessage upload = new FileUploadMessage();
@@ -214,7 +214,7 @@ private Stream GetFileStream(string fileName) {
 
 And at the client side code should look like as shown below.
 
-{% highlight css %}
+{% highlight csharp %}
 //download with message contract
 string baseDir = @"D:\Test";
 string downloadedFileName = "downloadedFestFile.txt";
@@ -256,7 +256,7 @@ DownloadFile(downloadedFilePath, ob.FileByteStream);
 ### 5. Download file using simple Stream.
 Your service side code when you are using simple stream to transfer file is as shown below.
 
-{% highlight css %}
+{% highlight csharp %}
 public Stream DownloadFile(string fileName) {
     return GetFileStream(fileName);
  }
