@@ -37,7 +37,6 @@ SOAP headers are always buffered, even when the transfer mode is set to streamed
 
 ## Table of contents
 
-
 1. Creating operation contract which returns Stream.
 2. Creating operation which returns DataContract to stream file.
 3. Creating operation which returns MessageContract to stream file.
@@ -153,9 +152,9 @@ public void TransferFileWithMessageContract(FileUploadMessage fileStream) {
 }
 
 private void SaveFile(string filename, Stream fileStream) {
-  string serverFileName = Path.Combine(_basePath, filename);
-   try {
-    using (FileStream outfile = new FileStream(serverFileName, FileMode.Create)) {
+string serverFileName = Path.Combine(_basePath, filename);
+try {
+using (FileStream outfile = new FileStream(serverFileName, FileMode.Create)) {
     const int bufferSize = 65536; // 64K
     Byte[] buffer = new Byte[bufferSize];
     int bytesRead = fileStream.Read(buffer, 0, bufferSize);
