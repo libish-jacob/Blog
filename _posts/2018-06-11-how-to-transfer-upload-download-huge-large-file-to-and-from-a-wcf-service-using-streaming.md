@@ -149,26 +149,26 @@ When you are using MessageContract to stream file, your service side contract co
 
 {% highlight csharp %}
 public void TransferFileWithMessageContract(FileUploadMessage fileStream) {
-            SaveFile(fileStream.Filename, fileStream.FileByteStream);
-        }
-        
+    SaveFile(fileStream.Filename, fileStream.FileByteStream);
+}
+
 private void SaveFile(string filename, Stream fileStream) {
-            string serverFileName = Path.Combine(_basePath, filename);
-            try {
-                using (FileStream outfile = new FileStream(serverFileName, FileMode.Create)) {
-                    const int bufferSize = 65536; // 64K
-                    Byte[] buffer = new Byte[bufferSize];
-                    int bytesRead = fileStream.Read(buffer, 0, bufferSize);
-                    while (bytesRead > 0) {
-                        outfile.Write(buffer, 0, bytesRead);
-                        bytesRead = fileStream.Read(buffer, 0, bufferSize);
-                    }
-                }
-            }
-            catch (Exception) {
-                throw;
-            }
-        }
+  string serverFileName = Path.Combine(_basePath, filename);
+   try {
+    using (FileStream outfile = new FileStream(serverFileName, FileMode.Create)) {
+    const int bufferSize = 65536; // 64K
+    Byte[] buffer = new Byte[bufferSize];
+    int bytesRead = fileStream.Read(buffer, 0, bufferSize);
+    while (bytesRead > 0) {
+    outfile.Write(buffer, 0, bytesRead);
+    bytesRead = fileStream.Read(buffer, 0, bufferSize);
+     }
+    }
+   }
+ catch (Exception) {
+  throw;
+  }
+ }
 {% endhighlight %}
 
 And on the client side...
@@ -206,10 +206,10 @@ public FileUploadMessage DownloadFileWithMessageContract(FileUploadMessage fileM
 }
 
 private Stream GetFileStream(string fileName) {
-            string filePath = Path.Combine(_basePath, fileName);
-            FileStream stream = new FileStream(filePath, FileMode.Open);
-            return stream;
-        }
+     string filePath = Path.Combine(_basePath, fileName);
+     FileStream stream = new FileStream(filePath, FileMode.Open);
+     return stream;
+  }
 {% endhighlight %}
 
 And at the client side code should look like as shown below.
@@ -237,20 +237,19 @@ message.FileByteStream = FileStream.Null;
 FileUploadMessage ob = fileTransferProxy.DownloadFileWithMessageContract(message);
 DownloadFile(downloadedFilePath, ob.FileByteStream);
 
-  private static void DownloadFile(string downloadedFilePath, Stream fs)
-    {
-     using (FileStream outStream = new FileStream(downloadedFilePath, FileMode.OpenOrCreate))
-       {
-          const int bufferSize = 65536; // 64K
-          Byte[] buffer = new Byte[bufferSize];
-          int bytesRead = fs.Read(buffer, 0, bufferSize);
-          while (bytesRead > 0)
-           {
-             outStream.Write(buffer, 0, bytesRead);
-             bytesRead = fs.Read(buffer, 0, bufferSize);
-           }
-       }
+private static void DownloadFile(string downloadedFilePath, Stream fs)
+ {
+ using (FileStream outStream = new FileStream(downloadedFilePath, FileMode.OpenOrCreate))
+  {
+    const int bufferSize = 65536; // 64K
+    Byte[] buffer = new Byte[bufferSize];
+    int bytesRead = fs.Read(buffer, 0, bufferSize);
+    while (bytesRead > 0)    {
+     outStream.Write(buffer, 0, bytesRead);
+     bytesRead = fs.Read(buffer, 0, bufferSize);
+    }
    }
+  }
 {% endhighlight %}
 
 ### 5. Download file using simple Stream.
