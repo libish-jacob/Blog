@@ -13,9 +13,7 @@ categories:
 description: >-
   In this article we will see how to transfer a huge file to and from WCF
   services efficiently. WCF supports streaming of data. We will use streaming to
-  transfer huge file efficiently to and from a WCF service. This article is all
-  about transferring file using streaming transfer mode in WCF and it does not
-  enforce you to use streaming always, because of its limitations.
+  transfer huge file efficiently to and from a WCF service.
 date: '2014-07-23 16:00 +0530'
 ---
 ## Introduction
@@ -85,11 +83,11 @@ We will be using MessageContract in our example. Lets create our message contrac
 {% highlight csharp %}
 [MessageContract]
 public class FileUploadMessage {
-   [MessageHeader(MustUnderstand = true)]
-   public string Filename;
-   
-   [MessageBodyMember(Order = 1)]
-   public Stream FileByteStream;
+[MessageHeader(MustUnderstand = true)]
+public string Filename;
+  
+[MessageBodyMember(Order = 1)]
+public Stream FileByteStream;
 }
 {% endhighlight %}
 
