@@ -17,7 +17,7 @@ date: '2014-09-02 11:01 +0530'
 ---
 ## Introduction
 
-  This could be one of the required features if you are working on WPF. But this won’t work without some additional work. Here in this post we will see how we can drag and drop items from RadTreeView to RadGridView. This is achieved with the help of behaviors.
+This could be one of the required features if you are working on WPF. But this won’t work without some additional work. Here in this post we will see how we can drag and drop items from RadTreeView to RadGridView. This is achieved with the help of behaviors.
 
 Below shown is the snippet of xaml for tree view. Here we have to set IsDragDropEnabled="True". This will allow you to drag and drop items from treeview to itself. I.e. you can drag a tree node to another parent node. We will have to do additional work to get it dragged and dropped to another control. Now we have to attach a custom behavior to this tree view with the help of interactivity. If you don’t want to use interactivity, then have a look at the bottom to find an alternative for this.
 
