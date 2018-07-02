@@ -22,7 +22,6 @@ categories:
 date: '2014-07-23 16:41 +0530'
 ---
 ## Introduction
-
 Service has zero application (non-infrastructure) endpoints. This might be because no configuration file was found for your application, or because no service element matching the service name could be found in the configuration file, or because no endpoints were defined in the service element. This can happen if there is no proper endpoint configured for the service.
 
 ## How to fix this
