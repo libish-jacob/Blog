@@ -16,7 +16,6 @@ categories:
 date: '2014-08-26 10:55 +0530'
 ---
 ## Introduction
-
 Worried over this exception? This happens when you haven’t set the Path= on binding. By default WPF binding will take the Path= part by default. But on controls which have a two way binding by default, this seems not to be working. You may have to set it explicitly. But in certain scenarios, you may be binding the value in a DataTemplate, for example,
 
 {% highlight csharp %}
