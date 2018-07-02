@@ -19,7 +19,6 @@ description: >-
 date: '2014-07-23 15:59 +0530'
 ---
 ## Introduction
-
 This fix is helpful if you are using WCF streaming and you got this exception while transferring huge file using data contract. If you are using streaming and the stream is transferred to or from WCF service, then you will get an exception like
 
 “There was an error while trying to serialize parameter http://tempuri.org/:fileStream. The InnerException message was 'Type 'System.IO.FileStream' with data contract name 'FileStream: http://schemas.datacontract.org/2004/07/System.IO' is not expected. Consider using a DataContractResolver or add any types not known statically to the list of known types - for example, by using the KnownTypeAttribute attribute or by adding them to the list of known types passed to DataContractSerializer.'.  Please see InnerException for more details.”
