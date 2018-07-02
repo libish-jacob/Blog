@@ -20,7 +20,6 @@ categories:
 date: '2014-08-21 10:46 +0530'
 ---
 ## Introduction
-
 TextWrapping is required when your text to display has to align itself inside a control. TextWrapping should work seamlessly when your control is of fixed height and width. But this won’t be the scenario in all cases. When we have a dynamic parent control whose width and height cannot be predicted, we would like the TextBlock which is placed inside it to adjust itself to fit into the container. In this case we would prefer to have TextBlock decide on the height and width based on the parent control. So we won’t set any width or height.
   
   Here, the TextWrapping algorithm will consider TextBlock to have infinite width and height. Also wrapping text is a very expensive operation. The algorithm must measure the size of every single line to figure out how to draw. When we don’t specify any width or height or say if we don’t specify a MaxWidth and MaxHeight, then we are adding load to the algorithm. So the algorithm will take time to calculate.
