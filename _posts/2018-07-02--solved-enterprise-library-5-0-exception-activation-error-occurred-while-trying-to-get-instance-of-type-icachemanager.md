@@ -13,6 +13,8 @@ description: >-
 categories:
   - .Net
 date: '2014-10-23 11:29 +0530'
+tags:
+  - Enterprise Library
 ---
 ## Introduction
 I was working on a project which uses Enterprise Library to store cache data to database backing store and I encountered an exception as Activation error occurred while trying to get instance of type ICacheManager.
