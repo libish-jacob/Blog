@@ -169,7 +169,7 @@ prose:
               value: "Visual Studio"
             - name: "Apache"
               value: "Apache"
-		-  name: "Enterprise Library"
+		 - name: "Enterprise Library"
 		   value: "Enterprise Library"
       - name: "categories"
         field:
