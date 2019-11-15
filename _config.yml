@@ -171,6 +171,8 @@ prose:
               value: "Apache"
             - name: "Enterprise Library"
               value: "Enterprise Library"
+            - name: "Delphi"
+              value: "Delphi"
 
       - name: "categories"
         field:
@@ -198,6 +200,8 @@ prose:
               value: "Source control"
             - name: "IDE"
               value: "IDE"
+            - name: "Continuous Integration"
+              value: "Continuous Integration"
       - name: "title"
         field:
           element: "text"
