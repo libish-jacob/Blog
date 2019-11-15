@@ -19,9 +19,6 @@ description: >-
 date: '2019-11-15 13:54 +0530'
 ---
 ## How to compile Delphi without license in CI build server
-
-## Introduction:
-
 In this post I will walk you through the activities required to build Delphi on build servers without the need for a costly code-gear license on all build servers. One of a typical reason why Delphi is still used is because of the cost involved in converting those code base to a newer language. This is not the topic of discussion here, but we will look at how this can be maintained and can be integrated into the Continuous Integration (CI) system that we have.
 As you know, CI system today runs on cluster and when it comes to build and, we must keep the cost under control by opting for the opensource version of dependent tools or by using methods where we need only limited license or no license at all. Here we will see how to build Delphi in the build server with no license requirement for Code Gear. The environment that I am using is Bamboo and powershell.
     
