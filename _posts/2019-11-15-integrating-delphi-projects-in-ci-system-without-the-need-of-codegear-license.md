@@ -22,23 +22,22 @@ date: '2019-11-15 13:54 +0530'
 
 ## Introduction:
 
-	In this post I will walk you through the activities required to build Delphi on build servers without the need for a costly code-gear license on all build servers. One of a typical reason why Delphi is still used is because of the cost involved in converting those code base to a newer language. This is not the topic of discussion here, but we will look at how this can be maintained and can be integrated into the Continuous Integration (CI) system that we have.
-	As you know, CI system today runs on cluster and when it comes to build and, we must keep the cost under control by opting for the opensource version of dependent tools or by using methods where we need only limited license or no license at all. Here we will see how to build Delphi in the build server with no license requirement for Code Gear. The environment that I am using is Bamboo and powershell.
+In this post I will walk you through the activities required to build Delphi on build servers without the need for a costly code-gear license on all build servers. One of a typical reason why Delphi is still used is because of the cost involved in converting those code base to a newer language. This is not the topic of discussion here, but we will look at how this can be maintained and can be integrated into the Continuous Integration (CI) system that we have.
+As you know, CI system today runs on cluster and when it comes to build and, we must keep the cost under control by opting for the opensource version of dependent tools or by using methods where we need only limited license or no license at all. Here we will see how to build Delphi in the build server with no license requirement for Code Gear. The environment that I am using is Bamboo and powershell.
     
 ### How to build without license
 
-	Delphi application can be compiled using MsBuild which is now available as opensource and free of cost. But building Delphi in server using MsBuild does not come easily. If CodeGear is installed on a machine, then it is easy to build Delphi using MSBuild. He we will see how to pack the required components as a NuGet package and use that package in build agent.
+Delphi application can be compiled using MsBuild which is now available as opensource and free of cost. But building Delphi in server using MsBuild does not come easily. If CodeGear is installed on a machine, then it is easy to build Delphi using MSBuild. He we will see how to pack the required components as a NuGet package and use that package in build agent.
     
 ### Which component should I pack as a nugget package?
 
-	Install CodeGear Delphi on your machine and setup the environment such that it can compile Delphi project. After this, copy the BDS folder from the Delphi installation path. You can find this from CodeGear by going to Tools->options and as shown in the image below
+Install CodeGear Delphi on your machine and setup the environment such that it can compile Delphi project. After this, copy the BDS folder from the Delphi installation path. You can find this from CodeGear by going to Tools->options and as shown in the image below
     
 ![Image1.JPG]({{site.baseurl}}/images/Image1.JPG)
 
-
-	Now we need one more folder. When you setup CodeGear for delphi, then CodeGear also saves a project in your AppConfig which saves the path to dependency. This is the key. Without this, we wont be able to compile Delphi in a machine where it is not configured. So lets copy this folder as well. For this, you must go to %AppData%\CodeGear\BDS and copy the 6.0 folder. Please note that I am using Delphi 2009 the folder name may change but please adjust according to the version that you use.
+Now we need one more folder. When you setup CodeGear for delphi, then CodeGear also saves a project in your AppConfig which saves the path to dependency. This is the key. Without this, we wont be able to compile Delphi in a machine where it is not configured. So lets copy this folder as well. For this, you must go to %AppData%\CodeGear\BDS and copy the 6.0 folder. Please note that I am using Delphi 2009 the folder name may change but please adjust according to the version that you use.
     
-	Now we need to update the link which connects BDS to the Configuration folder(BDS in AppData). To achieve this, we have to modify the file, 6.0\bin\CodeGear.Common.Targets which is available in the main BDS folder which we have copied initially. Now, update the settings such that it reflects the new path as shown below. Please note that what we are trying to achieve is a folder structure which looks like as shown in the image below. And the path updated below is reflecting the folder structure as shown below. Remember after doing this we are going to pack this folder as a nuget package. So whoever is referring to this will get this folder and can build their Delphi project using this.
+Now we need to update the link which connects BDS to the Configuration folder(BDS in AppData). To achieve this, we have to modify the file, 6.0\bin\CodeGear.Common.Targets which is available in the main BDS folder which we have copied initially. Now, update the settings such that it reflects the new path as shown below. Please note that what we are trying to achieve is a folder structure which looks like as shown in the image below. And the path updated below is reflecting the folder structure as shown below. Remember after doing this we are going to pack this folder as a nuget package. So whoever is referring to this will get this folder and can build their Delphi project using this.
     
 ![Image22.JPG]({{site.baseurl}}/images/Image22.JPG)
 
