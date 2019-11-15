@@ -52,6 +52,7 @@ To:
 {% endhighlight %}
 
 Now we have prepared the folder which can be packed as a nugget package which can be packed and hosted in NuGet server. The below PowerShell script explains how you can download the package from NuGet repository and use that along with msbuild to compile Delphi project. The script is self-explanatory.
+we have to make sure that we have set the environment variable. This is handled in the script bdlow. This is also a key to achieve compiling Delphi in server.
 
 {% highlight csharp %}
 $location = (Resolve-Path .\).Path
