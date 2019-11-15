@@ -32,13 +32,20 @@ title: Integrating Delphi projects in CI system without the need of CodeGear lic
 
 Modify file CodeGear.Common.Targets  as shown below.
 
-Change <Import Project="$(APPDATA)\CodeGear\$(BDSAppDataBaseDir)\6.0\EnvOptions.proj" Condition="Exists('$(APPDATA)\CodeGear\$(BDSAppDataBaseDir)\6.0\EnvOptions.proj') and '$(ProjectVersion)'!=''"/> 
-To 
+Change:  
+{% highlight csharp %}
+<Import Project="$(APPDATA)\CodeGear\$(BDSAppDataBaseDir)\6.0\EnvOptions.proj" Condition="Exists('$(APPDATA)\CodeGear\$(BDSAppDataBaseDir)\6.0\EnvOptions.proj') and '$(ProjectVersion)'!=''"/> 
+{% endhighlight %}
+
+To: 
+{% highlight csharp %}
 <Import Project="..\..\BDS\6.0\EnvOptions.proj" Condition="Exists('..\..\BDS\6.0\EnvOptions.proj') and '$(ProjectVersion)'!=''"/>
+{% endhighlight %}
+
 Now we have prepared the folder which can be packed as a nugget package which can be packed and hosted in NuGet server. The below PowerShell script explains how you can download the package from NuGet repository and use that along with msbuild to compile Delphi project. The script is self-explanatory.
 
-
-> $location = (Resolve-Path .\).Path
+{% highlight csharp %}
+$location = (Resolve-Path .\).Path
 if([string]::IsNullOrEmpty($env:bamboo_build_working_directory))
 {
 //Lets ensure that if the script is run from the root of the soulution folder then it //should run. This is required if a user wants to build it locally from his solution //folder. If not applicable, then please ignore.
@@ -72,7 +79,6 @@ if($Error.Count -ne 0)
 }
 
 Write-Output "Extracting Delphi package done!"
-
 $Error.Clear()
 Write-Output "Building solution"
 
@@ -96,3 +102,4 @@ else
     Write-Output "msbuild was successful" 
 }
 
+{% endhighlight %}
