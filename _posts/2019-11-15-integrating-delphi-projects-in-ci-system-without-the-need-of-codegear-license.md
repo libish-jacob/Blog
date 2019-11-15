@@ -1,9 +1,22 @@
 ---
 layout: post
 modified: '2019-11-15 13:54 +0530'
-published: false
+published: true
 comments: true
 title: Integrating Delphi projects in CI system without the need of CodeGear license
+tags:
+  - Delphi
+categories:
+  - Continuous Integration
+description: >-
+  In this post I will walk you through the activities required to build Delphi
+  on build servers without the need for a costly code-gear license on all build
+  servers. One of a typical reason why Delphi is still used is because of the
+  cost involved in converting those code base to a newer language. This is not
+  the topic of discussion here, but we will look at how this can be maintained
+  and can be integrated into the Continuous Integration (CI) system that we
+  have.
+date: '2019-11-15 13:54 +0530'
 ---
 ## How to compile Delphi without license in CI build server
 
