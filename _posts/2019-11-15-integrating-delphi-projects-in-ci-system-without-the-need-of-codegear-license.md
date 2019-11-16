@@ -5,6 +5,7 @@ published: true
 comments: true
 title: Integrating Delphi projects in CI system without the need of CodeGear license
 tags:
+  - Powershell
   - Delphi
 categories:
   - Continuous Integration
