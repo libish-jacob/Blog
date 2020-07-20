@@ -1,7 +1,7 @@
 ---
 layout: post
 modified: '2017-08-10 15:51 +0530'
-published: false
+published: true
 comments: true
 title: >-
   How to handle log4net RollingFileAppender logging from multiple application
@@ -191,4 +191,3 @@ We can achieve this by modifying the layout of log by using the below mentioned 
     <param name="ConversionPattern" value="%fileName %d [%t] %-5p [%C %F %L] - %m%n" />
 </layout>
 {% endhighlight %}
-
