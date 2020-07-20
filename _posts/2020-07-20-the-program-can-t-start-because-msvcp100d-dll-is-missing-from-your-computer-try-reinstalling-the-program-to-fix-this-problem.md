@@ -21,8 +21,6 @@ categories:
   - IDE
 date: '2015-02-25 16:03 +0530'
 ---
-## The program can't start because MSVCP100D.dll is missing from your computer. Try reinstalling the program to fix this problem
-
 We may get this error when we try to execute an application which has CPP component. Here MSVCP100 is a file which should be installed along with Microsoft Visual C++ 2010 Re-distributable Package. Here 100 means 2010 and D means debug version. This error occurs only when you are trying to run your application which is compiled using the “debug” configuration instead of “Release”.
 
 Here when you try to run the application which was the debug output, then it would expect the appropriate file which has the Debug version, when you don’t have visual studio installed on your machine, then you will experience this kind of issues.
