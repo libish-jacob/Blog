@@ -18,8 +18,6 @@ categories:
   - .Net
 date: '2015-06-07 16:21 +0530'
 ---
-## How to track WCF errors and exception
-
 This post is for those who are working with WCF and at times sulking because of errors which does not show up and who spends lots of time debugging what is going wrong with their service and client.
 
 I was working with a WCF service and I came across a situation where my client application is trying to connect to service via proxy and client is waiting for the call to return and it never returns finally it times out. I was not having any clue what was happening. I had application level tracing which was not able to track anything. Finally I decided to  enable WCF built in tracing!.
