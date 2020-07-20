@@ -17,7 +17,7 @@ categories:
   - .Net
 date: '2014-04-13 17:21 +0530'
 ---
-Issue
+### Issue
 How to Sort RadGridView in ascending order based on a column value when it is loaded.
 
 ### How did I fix it:
