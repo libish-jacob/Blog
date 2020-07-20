@@ -1,7 +1,7 @@
 ---
 layout: post
 modified: '2015-06-07 16:28 +0530'
-published: false
+published: true
 comments: true
 title: >-
   Mixed mode assembly is built against version 'v2.0.*' of the runtime and
@@ -41,5 +41,3 @@ To fix this, You have to add the below settings to your App.config file under co
     <requiredRuntime version="v4.0.20506"/>
 </startup>
 {% endhighlight %}
-
-
