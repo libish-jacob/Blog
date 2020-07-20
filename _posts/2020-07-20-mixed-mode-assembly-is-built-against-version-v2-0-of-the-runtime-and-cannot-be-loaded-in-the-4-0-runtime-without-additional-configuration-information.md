@@ -17,8 +17,6 @@ categories:
   - .Net
 date: '2015-06-07 16:28 +0530'
 ---
-##  Mixed mode assembly is built against version 'v2.0.*' of the runtime and cannot be loaded in the 4.0 runtime without additional configuration information.
-
 In this post we will see how to fix the exception due to mixed mode assembly while working with version 4.0 of runtime.
 
 ### Background
