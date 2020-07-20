@@ -22,8 +22,6 @@ categories:
   - .Net
 date: '2017-08-10 15:51 +0530'
 ---
-## How to handle log4net RollingFileAppender logging from multiple application instances
-
 Logging is one of the very important factor in any application. You require it to analyse what when and how things went wrong. It serves as the log of the application. But when you have multiple instance of the same application running in parallel, then you don’t have the purpose served properly by the logging mechanism as it will be writing all the log entry into the same file and the log will be cluttered. Here in this post we will discuss how to handle this typical situation when you have multiple instances running at the same time and log4net writes all the logs into the same file.
 
 ### Possible solutions
