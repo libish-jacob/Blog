@@ -1,7 +1,7 @@
 ---
 layout: post
 modified: '2015-02-25 16:03 +0530'
-published: false
+published: true
 comments: true
 title: >-
   The program can't start because MSVCP100D.dll is missing from your computer.
