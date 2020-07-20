@@ -1,7 +1,7 @@
 ---
 layout: post
 modified: '2014-04-13 15:47 +0530'
-published: false
+published: true
 comments: true
 title: How to add keyboard short cut for a control in WPF in proper MVVM way
 description: >-
