@@ -19,8 +19,6 @@ categories:
   - .Net
 date: '2015-08-06 15:38 +0530'
 ---
-## How to cancel a running task and to make sure it always cancels
-
 In this article we will see how we can cancel a running task. Task class in .net library is extremely useful when you want to handle thread. Developers don’t have to create or maintain thread explicitly. Methods executed by a Task typically execute asynchronously and it uses background threads from the thread pool. There is no direct way of cancelling a task. .Net framework provides CancellationToken  which we can use to cancel a task with limitation. We will first look at how to cancel a task with cancellation token and later we will see in which all scenario this doesn't work and we will also see the workaround for this.
 
 
