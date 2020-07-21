@@ -55,6 +55,7 @@ Now install this after downloading. While installing don’t forget to mark the 
 ![Select SQLite component]({{site.baseurl}}/images/Select-SQLite-component.PNG)
 
 ![Browse to find database]({{site.baseurl}}/images/Browse-to-find-database.PNG)
+
 Now it will show another dialog asking you to select your data base, here you browse and find the database which you have created. Now when you say OK to this dialog, it will create a model out of your database.
 
 ### Issue 1
@@ -63,6 +64,7 @@ You may get some error at this point like “Unable to determine the provider na
 This is a bug in SQLite provider. Install SQLite nugget package into the project after changing the framework version to 4.0 and later change it to whatever .net framework which you desired. This will be a one time activity and later if you wish to add this package from project which targets 4.5, then also it will work.
 
 ![Stock model]({{site.baseurl}}/images/Stock-model.PNG)
+
 Now once you have fixed all issues, and when you create a model, you will get the model diagram as shown above. Now we will try to add some stock into the database using EntityFramework. For this we will create a class file in DataService project as shown below.
 
 {% highlight csharp %}
