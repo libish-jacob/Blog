@@ -15,6 +15,7 @@ tags:
   - WPF
 categories:
   - .Net
+date: '2014-05-09 11:32 +0530'
 ---
 ### Issue
 At times we will face with a situation where we need to show an image from another project in the same solution. Say for example: If you are building an enterprise application then we will modularize the application. And at times we want to show some image from this module in the main shell view. This at times can run you crazy. Here we will see how to show an image from a different module in the shell view.
