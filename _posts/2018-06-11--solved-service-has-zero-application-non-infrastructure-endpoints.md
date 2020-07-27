@@ -28,7 +28,7 @@ Service has zero application (non-infrastructure) endpoints. This might be becau
 
 Create at least one endpoint for the service. If you are configuring endpoint using configuration file, then make sure you have your application configuration file in the output directory. Give proper name for the service.
 
-Possible problem for Service has zero application (non-infrastructure) endpoints exception.
+### Possible problem for Service has zero application (non-infrastructure) endpoints exception.
 
 Here if you are getting this exception after you have given proper endpoint, then the main culprit can be the name of the service. The service name has to be the class name of the service. Give the fully qualified name of the class with namespace. If your class name is “Service” and is in namespace “WcfService” as shown below
 
