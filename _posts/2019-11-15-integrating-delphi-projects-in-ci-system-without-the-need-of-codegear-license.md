@@ -3,7 +3,9 @@ layout: post
 modified: '2019-11-15 13:54 +0530'
 published: true
 comments: true
-title: Integrating Delphi projects in CI system without the need of CodeGear license
+title: >-
+  Integrating Delphi projects in build or CI system without the need of CodeGear
+  license
 tags:
   - Powershell
   - Delphi
