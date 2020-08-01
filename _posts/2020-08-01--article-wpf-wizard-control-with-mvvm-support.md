@@ -1,9 +1,18 @@
 ---
 layout: post
-modified: '2020-08-01 12:24 +0530'
-published: false
+modified: '2014-12-12 12:24 +0530'
+published: true
 comments: true
 title: '[Article] WPF Wizard control with MVVM support'
+description: >-
+  In this article I am presenting a custom wizard control which supports MVVM
+  approach. Here we will see how to use this control also we will see the
+  features this control exposes.
+tags:
+  - WPF
+categories:
+  - UI Controls
+date: '2014-12-12 12:24 +0530'
 ---
 ### Introduction
 In this article I am presenting a custom wizard control which supports MVVM approach. Here we will see how to use this control also we will see the features this control exposes. You can download this control from [Github page](https://github.com/libish-jacob/Wpf-Wizard-Control). Contribution to this control will be appreciated. Also you can download the complete solution which makes use of this control from [here](https://github.com/libish-jacob/Wpf-Wizard-Control). Once the wizard control is implemented, it will look like as shown below.
