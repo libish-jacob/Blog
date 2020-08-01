@@ -138,3 +138,4 @@ IWizardItem is the interface which you need to implement on the viewmodel for th
       FinalButtonText="Done"
       WizardItems="{Binding WizardItems}" />
 {% endhighlight %}
+
