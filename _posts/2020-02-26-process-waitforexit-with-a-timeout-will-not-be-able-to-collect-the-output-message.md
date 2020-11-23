@@ -4,7 +4,7 @@ modified: '2020-02-26 13:45 +0530'
 published: true
 comments: true
 title: >-
-  Process.WaitForExit with a timeout will not be able to collect the output
+  Process WaitForExit with a timeout will not be able to collect the output
   message.
 tags:
   - 'C#'
