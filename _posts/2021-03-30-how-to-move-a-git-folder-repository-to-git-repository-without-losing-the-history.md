@@ -30,7 +30,9 @@ Create a blank repository in bitbucket. This is the repository where you want to
 Once it is cloned, open the terminal from source tree. [If you don’t have source tree then use a command prompt and cd into the local repository folder].
 Now run the below command to add a remote to the repository.
 
+{% highlight csharp %}
 git remote add -f old_repo OLD-FOLDER-REPO-URL
+{% endhighlight %}
 
 here old_repo is the name give to the remote. OLD-FOLDER-REPO-URL is the folder path to the .git folder(for folder repository. e.g. W:\Folder\.git). Make sure that the path is escaped of special characters. This includes the back slash such that the path will look like as in example W:\\Folder\\.git
 The command will take some time to execute depending on how big the repository is. In case if you want to remove the new remote, then use command "git remote -v" to list all the remotes and use "git remote rm old_repo" to delete it.
@@ -47,6 +49,3 @@ Now we are done, we will have to now push the changes to origin master. In Sourc
 
 
 Now the changes including the history is pushed to server. Now you can manage the permission and control the merges to master via pull requests.
-
-
-
