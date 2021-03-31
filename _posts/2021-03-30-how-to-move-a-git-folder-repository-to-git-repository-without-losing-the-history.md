@@ -16,6 +16,8 @@ description: >-
   merged. Here the challenge is to retain the history of changes without losing
   it while porting it. Let’s see how this can be achieved.
 date: '2021-03-30 16:38 +0530'
+tags:
+  - Git
 ---
 Here in the scenario, what I have was a folder repository where users will commit the changes. Users will treat the folder which is in a network location and will commit the changes to this repository.
 Now I want this to be moved to a bit bucket server so that I can use the proper process to get the changes merged. Here the challenge is to retain the history of changes without losing it while porting. Let’s see how this can be achieved.
