@@ -173,6 +173,8 @@ prose:
               value: "Enterprise Library"
             - name: "Delphi"
               value: "Delphi"
+            - name: "Git"
+              value: "Git"
 
       - name: "categories"
         field:
