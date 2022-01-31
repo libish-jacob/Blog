@@ -21,7 +21,8 @@ description: >-
   it efficient in reading data. Works quite efficiently with data processing
   frameworks. Automatically stores schema information. SQL querying is possible
   with this file format using
-tags: ''
+tags:
+  - Parquet
 ---
    Parquet is a binary file format designed with big data in mind where we must access data frequently and efficiently. The way it stores file on the disk is also different from other file formats. It is a column-based data file. And in reality it uses both row based and column based approach to bring the best of both worlds. The data is encoded on disk which ensures that the size remains small compared to actual data and is then compressed where the file is scanned as whole and cut out redundant parts. The query/read speed is dramatically fast when compared to other file formats. Nested data is handled efficiently which is quite cumbersome in other file format to achieve. Doesn’t require to parse the entire file to find data due to its way of storing data. This makes it efficient in reading data. Works quite efficiently with data processing frameworks. Automatically stores schema information. SQL querying is possible with this file format using proper tools.
    
@@ -114,7 +115,3 @@ Parquet-tools: Use this to inspect the file. Parquet viewer will also help detec
 Parquet – viewer: You can use https://github.com/mukunku/ParquetViewer to view parquet data in windows.
 
 Git-Hub link  - https://github.com/libish-jacob/Parquet-experiment
-
-
-
-
