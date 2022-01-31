@@ -70,6 +70,33 @@ It is one of the best encodings in parquet. It uses 3 stages of encoding; Dictio
 -       Another way is to decrease the row group size – parquet.block.size – this will help fit all data in the dictionary. – This is the preferred way.
 
 -### Partitioning:
+- 		Partition by embedding the predicates in directory structure. This will create sub folders with the predicate name in it. So when we search with the predicate, then we only need to read the files in the directory which is named with the predicate. Df.write.partitionBy(“EmployeeCategory”).parquet(…)
+-       Refer the library which you are using to find this setting.
+-       Partition with bucketing. This will partition based on a hash value of row. This is helpful when you have many columns with different values and column-based partition will end up with a lot of files.
+
+All the above will help us avoid reading irrelevant data and makes the overall reading much faster.
+
+### Reduce overhead
+Avoid many small files if you are prefering partition. Because for every file, parquet must do the below. 
+- Setup internal data structures
+- Instantiate reader objects
+- Fetch file
+- Parse parquet metadata
+
+So do a tradeoff to reduce the number. On the contrary, avoid few huge files. A single 250 GB file took 1hr to complete a count() query, and 250 files of 1GB each took 5 minutes for the same query.
+Manual compaction – If you have too many small files, then you can do a manual compaction with either df.repartition(numPartitions).write.parquet(…) or df.coalesce(numPartitions).write.parquet(…). One must do this often if you have continuous jobs which will create small files over the period.
+When we do this, we must make sure that this is not impacting users since it is re-partitioning existing files. So we have to do it after taking necessary measures. One way to get around it is by using a store layer on top of parquet. Delta Lake is one such framework which ensures ACID transactions.
+
+### Recommendation:
+Do not use parquet file directly when you know this file will grow over the period and to make sure that the file will not get corrupted if there is a write operation which crashes mid-way. So always use it via a wrapper framework which ensures ACID properties on to this file.
+
+### Tools:
+Parquet-tools: Use this to inspect the file. Parquet viewer will also help detect metadata which gives most of what you are searching for.
+
+Parquet – viewer: You can use https://github.com/mukunku/ParquetViewer to view parquet data in windows.
+
+Git-Hub link  - https://github.com/libish-jacob/Parquet-experiment
+
 
 
 
