@@ -175,8 +175,6 @@ prose:
               value: "Delphi"
             - name: "Git"
               value: "Git"
-            - name: "Parquet"
-              value: "Parquet"
 
       - name: "categories"
         field:
