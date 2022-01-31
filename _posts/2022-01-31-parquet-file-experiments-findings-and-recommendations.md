@@ -112,6 +112,6 @@ Do not use parquet file directly when you know this file will grow over the peri
 ### Tools:
 Parquet-tools: Use this to inspect the file. Parquet viewer will also help detect metadata which gives most of what you are searching for.
 
-Parquet – viewer: You can use https://github.com/mukunku/ParquetViewer to view parquet data in windows.
+Parquet – viewer: You can use [https://github.com/mukunku/ParquetViewer](https://github.com/mukunku/ParquetViewer) to view parquet data in windows.
 
-Git-Hub link  - https://github.com/libish-jacob/Parquet-experiment
+Git-Hub link  - [https://github.com/libish-jacob/Parquet-experiment](https://github.com/libish-jacob/Parquet-experiment)
