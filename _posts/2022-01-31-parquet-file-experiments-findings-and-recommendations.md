@@ -65,11 +65,11 @@ Parquet enables an option to split the data in different files. But if you are u
 
 ### Parquet file:
 On disk it is usually not a single file. Logical file is defined by a root directory. Root directory contains one or multiple files
-./example_parquet_file
+> ./example_parquet_file
 ./example_parquet_file/part-000-8745-……-5678.snappy.parquet
 
  or contains sub directory structures with files in leaf directory.
-./example_parquet_file
+> ./example_parquet_file
 ./example_parquet_file/country=Netherlands
 ./example_parquet_file/ country=Netherlands/part-000-8745-……-5678.snappy.parquet
 
