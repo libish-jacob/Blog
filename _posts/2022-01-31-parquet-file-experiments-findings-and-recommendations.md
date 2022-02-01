@@ -40,6 +40,7 @@ On Physical front data can be stored as–
 - Row based – each row is written one after the other – column data is fragmented.
 - Column based – each column is written one after the other. Here the column data is stored together. To read subset of column, it must read full column value.
 - Hybrid – mix of both row based, and column based are used. Here column data chunk is broken down to manageable chunks and stored. It ensures that entire column chunk does not have to be read to read a subset of column value.
+
 Parquet use the hybrid approach.
 
 ### Different workloads:
@@ -78,7 +79,7 @@ To get around this, pre-sort the predicate(The value by which you will search da
 Match predicate and column type. Don’t rely on the casting and conversion.
 
 If you are using dictionary encoding for row group, then you can leverage dictionary filtering to make the search faster. The min max values in the footer cannot precisely say which row has the data since min and max can be in range which may not say exactly if the value is in there if the data is unsorted. But if we are using dictionary encoding, we could leverage from the index which dictionary encoding creates, which is stored at the beginning of the column chunk,  which can be used by reader to figure out if a data is in there. Enable this by looking for a setting like 
-parquet.filter.dictionary.enabled – find the appropriate setting in the library that you are using.
+> parquet.filter.dictionary.enabled – find the appropriate setting in the library that you are using.
 
 ### Optimization:
 ### RLE_Dictionary encoding:
