@@ -117,7 +117,7 @@ One must do this often if you have continuous jobs which will create small files
 When we do this, we must make sure that this is not impacting users since it is re-partitioning existing files. So we have to do it after taking necessary measures. One way to get around it is by using a store layer on top of parquet. Delta Lake is one such framework which ensures ACID transactions.
 
 ### Recommendation:
-Do not use parquet file directly especially when you want to use it as a central repository of data and when you know this file will grow over the period and to make sure that the file will not get corrupted if there is a write operation which crashes mid-way. So always use it via a wrapper framework which ensures ACID properties on to this file. Delta Lake is one such framework.
+> Do not use parquet file directly especially when you want to use it as a central repository of data and when you know this file will grow over the period and to make sure that the file will not get corrupted if there is a write operation which crashes mid-way. So always use it via a wrapper framework which ensures ACID properties on to this file. Delta Lake is one such framework.
 
 ### Tools:
 Parquet-tools: Use this to inspect the file. Parquet viewer will also help detect metadata which gives most of what you are searching for.
