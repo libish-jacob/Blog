@@ -86,12 +86,16 @@ If you are using dictionary encoding for row group, then you can leverage dictio
 It is one of the best encodings in parquet. It uses 3 stages of encoding; Dictionary encoding creates index of repeating words and uses the index instead of the repeating words. RLE, Bit packing will check for repeating index and replaces it with an encode which says which index repeated how many times. E.g. (3,4). One of the downsides of this approach is that 
 - 		Dictionary can become too big – When it exceeds the size, the encoding falls back to PLAIN.
 -       There will be one dictionary per row group.
--       One way to get out dictionary reaching its size is to increase the dictionary size – 			parquet.dictionary.page.size – refer the library that you are using for this setting.
--       Another way is to decrease the row group size – parquet.block.size – this will help fit all data in the dictionary. – This is the preferred way.
+-       One way to get out dictionary reaching its size is to increase the dictionary size –
+> parquet.dictionary.page.size – refer the library that you are using for this setting.
+-       Another way is to decrease the row group size – 
+> parquet.block.size 
+
+this will help fit all data in the dictionary. – This is the preferred way.
 
 ### Partitioning:
-- 		Partition by embedding the predicates in directory structure. This will create sub folders with the predicate name in it. So when we search with the predicate, then we only need to read the files in the directory which is named with the predicate. Df.write.partitionBy(“EmployeeCategory”).parquet(…)
--       Refer the library which you are using to find this setting.
+- 		Partition by embedding the predicates in directory structure. This will create sub folders with the predicate name in it. So when we search with the predicate, then we only need to read the files in the directory which is named with the predicate. 
+> Df.write.partitionBy(“EmployeeCategory”).parquet(…) - Refer the library which you are using to find this setting.
 -       Partition with bucketing. This will partition based on a hash value of row. This is helpful when you have many columns with different values and column-based partition will end up with a lot of files.
 
 All the above will help us avoid reading irrelevant data and makes the overall reading much faster.
@@ -104,7 +108,12 @@ Avoid many small files if you are prefering partition. Because for every file, p
 - Parse parquet metadata
 
 So do a tradeoff to reduce the number. On the contrary, avoid few huge files. A single 250 GB file took 1hr to complete a count() query, and 250 files of 1GB each took 5 minutes for the same query.
-Manual compaction – If you have too many small files, then you can do a manual compaction with either df.repartition(numPartitions).write.parquet(…) or df.coalesce(numPartitions).write.parquet(…). One must do this often if you have continuous jobs which will create small files over the period.
+Manual compaction – If you have too many small files, then you can do a manual compaction with either
+> df.repartition(numPartitions).write.parquet(…)
+or
+df.coalesce(numPartitions).write.parquet(…).
+
+One must do this often if you have continuous jobs which will create small files over the period.
 When we do this, we must make sure that this is not impacting users since it is re-partitioning existing files. So we have to do it after taking necessary measures. One way to get around it is by using a store layer on top of parquet. Delta Lake is one such framework which ensures ACID transactions.
 
 ### Recommendation:
