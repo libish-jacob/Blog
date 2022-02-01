@@ -65,13 +65,15 @@ Parquet enables an option to split the data in different files. But if you are u
 
 ### Parquet file:
 On disk it is usually not a single file. Logical file is defined by a root directory. Root directory contains one or multiple files
-> ./example_parquet_file 
-./example_parquet_file/part-000-8745-……-5678.snappy.parquet
+- .\example_parquet_file 
+- .\example_parquet_file\part-000-8745-……-5678.snappy.parquet
+
 
  or contains sub directory structures with files in leaf directory.
-> ./example_parquet_file 
-./example_parquet_file/country=Netherlands 
-./example_parquet_file/ country=Netherlands/part-000-8745-……-5678.snappy.parquet
+- .\example_parquet_file 
+- .\example_parquet_file\country=Netherlands 
+- .\example_parquet_file\country=Netherlands\part-000-8745-……-5678.snappy.parquet
+
 
 ### How to optimize the reading speed:
 Metadata regarding the data is stored in the footer. Reader utilizes this and reads it first. The footer contains min max values of data in the row group. We can leverage this and speed up the reading process by asking the reader to consider this. This is enabled by default but in case if you need look for spark.sql.parquet.filterPushdown option in your reader. It doesn’t work well with unsorted data.
