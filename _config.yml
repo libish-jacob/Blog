@@ -177,6 +177,8 @@ prose:
               value: "Git"
             - name: "Parquet"
               value: "Parquet"
+		 - name: "Apache kafka"
+              value: "Apache kafka"
 
       - name: "categories"
         field:
@@ -206,6 +208,10 @@ prose:
               value: "IDE"
             - name: "Continuous Integration"
               value: "Continuous Integration"
+            - name: "Micro services"
+              value: "Micro services"
+            - name: "Event driven system"
+              value: "Event driven system"
       - name: "title"
         field:
           element: "text"
