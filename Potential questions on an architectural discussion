@@ -1,0 +1,9 @@
+---
+published: false
+---
+## Questions
+
+1. How different interface handshake will work when you have the new architecture in place. How will it work when not all interfaces are ready? 
+    Potential answer - Build Inteface and make it ready to work with adaptors to handle lagacy way.
+    
+
