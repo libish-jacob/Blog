@@ -29,14 +29,18 @@ Now at the consumer side, we must write a piece of code which knows how to read 
 Producer and consumer doesn’t know each other. They are completely decoupled. Producers or consumers can scale. You can add consumers/producers into the system without disturbing the system. They can fail independently they can evolve independently.
 What orchestrator does: Each broker has the capability of process topics and can store it in its disk. For durability purpose, it is also replicated in other brokers too. When a broker fails, these stored topics needs to be managed. There should be someone who should decide who has the responsibility of these topics. These are the main job of orchestrator.
 Topics are sequence of events. Since it is a log, you can only write to topic at its end. Many producers can write to a topic, or one producer can write to many topics. Conceptually you can have as many topics as you like.
-Topic-partition – Topics is a log, it can increase in size over period, it needs to be stored in a broker. Broker is a machine with a disk size, we can scale the machine vertically, but it cannot scale forever. Also to read in and write into it will become costly if it keeps increasing its size. So to handle this topics effectively, Kafka has ways to partition these topics and each partition can be allocated to different brokers. This is key to how Kafka scales. So when we do this, every partition is a log. 
+
+## Topic-partition
+ Topics is a log, it can increase in size over period, it needs to be stored in a broker. Broker is a machine with a disk size, we can scale the machine vertically, but it cannot scale forever. Also to read in and write into it will become costly if it keeps increasing its size. So to handle this topics effectively, Kafka has ways to partition these topics and each partition can be allocated to different brokers. This is key to how Kafka scales. So when we do this, every partition is a log. 
 Each partition is then further broken into segments. SO a partitions on a broker  is a set of files with index. You don’t really have to worry about segments but you do have to think about partitioning as you think about how to model data in topics. Kafka makes the decision about where these partitions are going to live.
 What Kafka doesn’t do is to keep track of the size of those partitions and move them around if one broker gets overloaded as topics gets created and destroyed. These are functionality that we need to add to keep those things balanced.
-How Kafka works:
+
+## How Kafka works:
 1.	How to handle schema change.
 2.	How to handle when Kafka node run out of space?
 3.	Non default types and serialization.(GUID as key for a message) – schemaRegistry https://bartwullems.blogspot.com/2020/11/sending-message-through-kafka-value.html
-Setting up Kafka cluster on local machine.
+
+## Setting up Kafka cluster on local machine.
 1.	Java JDK must be installed.
 2.	Kafka package must be downloaded
 3.	Configure Kafka.
@@ -44,13 +48,14 @@ The java used by Kafka is JDK 8 so please download and install JDK 8.
 Download Kafka package from apache.org and place it in some folder.
 These are nicely explained at https://medium.com/technofunnel/apache-kafka-in-5-minutes-c92c43ba3f39
 
-How to run more Brokers locally:
+## How to run more Brokers locally:
 Make sure you have separate server configuration for each broker that you want. And on each setting, make sure to change the below values.
 1.	broker.id=1
 2.	port=9192
 3.	log.dirs=C:\kafka_2.12-2.4.0\Broker1
 Start each broker separately.
-When going to production:
+
+## When going to production:
 Update the server server.properties to reflect the settings required for your production environment.
 Set the proper broker id: broker.id=0
 Set host name and port numbers :
